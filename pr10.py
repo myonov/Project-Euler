@@ -1,8 +1,7 @@
 from __future__ import print_function
 
-prime_list = [2]
-
 def gen_primes(n):
+    prime_list = [2]
     for x in range(3, n, 2):
         l = len(prime_list)
         f = True

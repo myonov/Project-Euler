@@ -40,6 +40,18 @@ class Rat(object):
         self.p /= s
         self.q /= s
 
+    def __eq__(self, other):
+        return self.p, self.q == other.p, other.q
+
+    def __ne__(self, other):
+        return not self == other
+
+    def __hash__(self, other):
+        return (self.p + 1001) ^ (self.q + 997)
+
+    def __lt__(self, other):
+        return self.p * other.q < other.p * self.q
+
     def __str__(self):
         return 'rat<{0} / {1}>'.format(self.p, self.q)
 

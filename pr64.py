@@ -14,7 +14,7 @@ def period(s):
 
     while True:
         if (p, r, q) in d:
-            return pos - d[(p, r, q)]
+            return pos - d[(p, r, q)], a
 
         a.append(int(r * (ss + p) / q))
         d[(p, r, q)] = pos
@@ -37,7 +37,7 @@ def main():
     for i in range(2, limit):
         k = int(i ** 0.5)
         if k*k == i: continue
-        cnt += period(i) % 2 == 1
+        cnt += period(i)[0] % 2 == 1
 
     print(cnt)
 

@@ -6,8 +6,8 @@ def main():
     limit = 80
 
     m = [
-        map(int, line.strip().replace(',', ' ').split())
-        for line in open('matrix2.txt')
+        map(int, line.strip().split(','))
+        for line in open('matrix.txt')
     ]
 
     INF = 10 ** 100

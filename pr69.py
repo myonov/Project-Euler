@@ -1,8 +1,7 @@
 from __future__ import print_function
 
-def compute_func():
+def compute_func(limit=1000001):
     from pr10 import gen_primes
-    limit = 1000001
     pr = gen_primes(limit)
     s = set(pr)
 
